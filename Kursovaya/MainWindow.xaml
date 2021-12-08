@@ -1,0 +1,40 @@
+﻿<Window x:Class="Kursovaya.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kursovaya"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Image HorizontalAlignment="Left" Source="Images/Image1.png" Height="40" Margin="5,5,0,0" VerticalAlignment="Top" Width="48"/>
+        <TabControl Margin="0,50,0,0">
+            <TabItem Header="Заявки" MinWidth="160" Height="23" Margin="-2,-2,-2,-0.2" VerticalAlignment="Bottom">
+                <DataGrid Name="OrdersDataGrid" AutoGenerateColumns="False" ColumnWidth="*" MinRowHeight="40" FontSize="13" Margin="0,0,150,0">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header=" " Binding="{Binding Path=Id}" Width="25" />
+                        <DataGridTextColumn Header="Статус" Binding="{Binding Path=Status}"/>
+                        <DataGridTextColumn Header="Дата заявки" Binding="{Binding Path=RegistrationDate}"/>
+                        <DataGridTextColumn Header="Дата поставки" Binding="{Binding Path=ClosingDate}"/>
+                        <DataGridTextColumn Header="Приоритет" Binding="{Binding Path=Priority}"/>
+                        <DataGridTextColumn Header="Поставщик" Binding="{Binding Path=Supplier}"/>
+                        <DataGridTextColumn Header="Исполнитель" Binding="{Binding Path=Doer}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="Поставки" MinWidth="160"></TabItem>
+            <TabItem Header="Продукты" MinWidth="160">
+                <DataGrid Name="ProductsDataGrid" AutoGenerateColumns="False" ColumnWidth="*" MinRowHeight="40" FontSize="13" Margin="0,0,150,0">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header=" " Binding="{Binding Path=Id}" Width="25" />
+                        <DataGridTextColumn Header="Название" Binding="{Binding Path=Name}"/>
+                        <DataGridTextColumn Header="Количество" Binding="{Binding Path=Quantity}"/>
+                        <DataGridTextColumn Header="Мера" Binding="{Binding Path=Measure}"/>
+                        <DataGridTextColumn Header="Срок годности" Binding="{Binding Path=ShelfLife}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="Статистика" MinWidth="160"></TabItem>
+        </TabControl>
+    </Grid>
+</Window>
