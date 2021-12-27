@@ -1,0 +1,30 @@
+﻿<Window x:Class="Kursovaya.SupplyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kursovaya"
+        mc:Ignorable="d"
+        Title="SupplyWindow" Height="460" Width="370">
+    <Grid>
+        <Label Content="Продукт" HorizontalAlignment="Left" Margin="27,54,0,0" VerticalAlignment="Top" />
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="182,57,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="155" Name="productTextBox"/>
+        <Label Content="Количество" HorizontalAlignment="Left" Margin="27,120,0,0" VerticalAlignment="Top" RenderTransformOrigin="0,0.457" Width="83"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="138,124,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="40"/>
+        <Label Content="Мера" HorizontalAlignment="Left" Margin="220,119,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="297,123,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="40"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="182,189,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="155"/>
+        <Label Content="Поставщик" HorizontalAlignment="Left" Margin="27,186,0,0" VerticalAlignment="Top" Width="128"/>
+        <GroupBox Header="Проверьте корректность данных" HorizontalAlignment="Left" Height="237" Margin="10,10,0,0" VerticalAlignment="Top" Width="343"/>
+        <GroupBox Header="Введите данные" HorizontalAlignment="Left" Height="118" Margin="10,264,0,0" VerticalAlignment="Top" Width="343">
+            <Grid>
+                <Label Content="Цена" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="171,13,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="150"/>
+                <Label Content="Срок годности" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top"/>
+                <DatePicker HorizontalAlignment="Left" Margin="171,63,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.642,3.918" Width="150"/>
+            </Grid>
+        </GroupBox>
+        <Button Content="Оформить" HorizontalAlignment="Left" Margin="267,401,0,0" VerticalAlignment="Top" Width="86"/>
+
+    </Grid>
+</Window>
